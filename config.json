@@ -18,6 +18,7 @@
     "device_topic_suffix": "",
     "discovery_prefix": "homeassistant",
     "discovery_interval": 60,
+    "discovery_ids": "",
     "force_update": false,
     "log_level": "debug"
   },
@@ -31,6 +32,7 @@
     "device_topic_suffix": "str?",
     "discovery_prefix": "str",
     "discovery_interval": "int",
+    "discovery_ids": "str?", 
     "force_update": "bool",
     "log_level": "list(default|quiet|debug)"
   },
