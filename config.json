@@ -1,7 +1,7 @@
 {
   "name": "rtl_433 discovery",
   "version": "0.1.1",
-  "slug": "rtl433mqttautodiscovery",
+  "slug": "rtl433discovery",
   "description": "discovery of rtl_433 device",
   "url": "https://github.com/tds04/Rtl_433-Discovery",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
