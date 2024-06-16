@@ -3,7 +3,7 @@ FROM ${BUILD_FROM} as builder
 
 ARG rtl433GitRevision=23.11
 
-RUN wget https://raw.githubusercontent.com/tds04/rtl_433_ha/main/scripts/rtl_433_mqtt_hass.py -O rtl_433_mqtt_hass.py
+RUN wget https://raw.githubusercontent.com/tds04/Rtl_433-Discovery/main/rtl_433_mqtt_hass.py -O rtl_433_mqtt_hass.py
 
 FROM ${BUILD_FROM}
 
@@ -14,7 +14,7 @@ RUN \
     pip install \
         --no-cache-dir \
         --prefer-binary \
-        paho-mqtt==1.6.1 \
+        paho-mqtt==2.1.0 \
     \
     && chmod a+x /run.sh
 
