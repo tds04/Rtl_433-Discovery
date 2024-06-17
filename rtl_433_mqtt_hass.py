@@ -34,8 +34,8 @@ discovery_timeouts = {}
 
 # Fields that get ignored when publishing to Home Assistant
 # (reduces noise to help spot missing field mappings)
-#SKIP_KEYS = [ "type", "model", "subtype", "channel", "id", "mic", "mod",
-#                "freq", "sequence_num", "message_type", "exception", "raw_msg" ]
+SKIP_KEYS = [ "type", "model", "subtype", "channel", "id", "mic", "mod",
+                "freq", "sequence_num", "message_type", "exception", "raw_msg" ]
 
 
 # Global mapping of rtl_433 field names to Home Assistant metadata.
