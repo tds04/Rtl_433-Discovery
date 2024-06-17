@@ -50,7 +50,7 @@ else
   fi
 
   # This is an optional parameter and we don't want to overwrite the defaults
-  DISCOVERY_IDS=$(bashio::config "discover_ids")
+  DISCOVERY_IDS=$(bashio::config "discovery_ids")
   if [ ! -z $DISCOVERY_IDS ]; then
     OTHER_ARGS="${OTHER_ARGS} -I ${DISCOVERY_IDS}"
   fi
