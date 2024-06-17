@@ -34,7 +34,7 @@ else
   RTL_TOPIC=$(bashio::config "rtl_topic")
   DISCOVERY_PREFIX=$(bashio::config "discovery_prefix")
   DISCOVERY_INTERVAL=$(bashio::config "discovery_interval")
-  DISCOVERY_IDS=$(bashio::config "discovery_ids")
+#  DISCOVERY_IDS=$(bashio::config "discovery_ids")
 
   OTHER_ARGS=""
   if bashio::config.true "mqtt_retain"; then
