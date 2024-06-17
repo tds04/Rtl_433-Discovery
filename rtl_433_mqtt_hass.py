@@ -608,8 +608,10 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "consumption",
         "config": {
-            "name": "Neptune Consumption Value",
+            "name": "Water Consumption Value",
             "value_template": "{{ value|int }}",
+            "device_class": "water",
+            "unit_of_measurement": "gal",
             "state_class": "total_increasing",
         }
     },
