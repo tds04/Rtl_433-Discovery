@@ -600,6 +600,8 @@ mappings = {
         "config": {
             "name": "SCM Consumption Value",
             "value_template": "{{ value|int }}",
+            "device_class": "",
+            "unit_of_measurement": "",         
             "state_class": "total_increasing",
         }
     },
