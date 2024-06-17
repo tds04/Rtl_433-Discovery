@@ -49,6 +49,12 @@ else
     OTHER_ARGS="${OTHER_ARGS} -T ${DEVICE_TOPIC_SUFFIX}"
   fi
 
+  # This is an optional parameter and we don't want to overwrite the defaults
+  DISCOVERY_IDS=$(bashio::config "discover_ids")
+  if [ ! -z $DISCOVERY_IDS ]; then
+    OTHER_ARGS="${OTHER_ARGS} -I ${DISCOVERY_IDS}"
+  fi
+
   LOG_LEVEL=$(bashio::config "log_level")
   if [[ $LOG_LEVEL == "quiet" ]]; then
     OTHER_ARGS="${OTHER_ARGS} --quiet"
@@ -64,4 +70,4 @@ if [ ! -z ${MQTT_PORT+x} ]; then
 fi
 
 echo "Starting rtl_433_mqtt_hass.py..."
-python3 -u /rtl_433_mqtt_hass.py -H $MQTT_HOST -p $MQTT_PORT -R "$RTL_TOPIC" -D "$DISCOVERY_PREFIX" -i $DISCOVERY_INTERVAL -I $DISCOVERY_IDS $OTHER_ARGS
+python3 -u /rtl_433_mqtt_hass.py -H $MQTT_HOST -p $MQTT_PORT -R "$RTL_TOPIC" -D "$DISCOVERY_PREFIX" -i $DISCOVERY_INTERVAL $OTHER_ARGS
